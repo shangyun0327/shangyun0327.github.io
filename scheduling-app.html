@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安信診所排班程式</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>安信診所排班程式</h1>
+        
+        <h2>1. 輸入員工資訊</h2>
+        <input type="text" id="employeeName" placeholder="員工姓名">
+        <button onclick="addEmployee()">新增員工</button>
+        <div id="employeeList"></div>
+        
+        <h2>2. 設定班別資訊</h2>
+        <input type="number" id="morningShift" placeholder="上午班人數">
+        <input type="number" id="afternoonShift" placeholder="下午班人數">
+        <input type="number" id="saturdayShift" placeholder="週六上午班人數">
+        
+        <h2>3. 設定請假日期</h2>
+        <select id="employeeSelect"></select>
+        <input type="date" id="leaveDate">
+        <button onclick="addLeave()">新增請假</button>
+        <div id="leaveList"></div>
+        
+        <h2>4. 生成排班表</h2>
+        <input type="month" id="scheduleMonth">
+        <button onclick="generateSchedule()">生成排班表</button>
+        
+        <div id="scheduleResult"></div>
+
+        <div class="footer">
+            © 2024 安信診所. 版權所有。由 Branden 開發。
+        </div>
+    </div>
+
+    <script>
+        // ... [保持原有的 JavaScript 代碼不變] ...
+    </script>
+</body>
+</html>
